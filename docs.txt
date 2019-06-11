@@ -44,4 +44,38 @@ III/ STRING
 		+ a  = "a" 
 		+ b = "b"
 		+ a << b  : tương tự a += b
-		=> a = "ab"  
+		=> a = "ab" 
+
+IV/ Array
+	- arr = Array.new | Array.new(<number_of_item>)
+	- push(<item_value>) | arr << <item_value> | arr += <item_value>
+	- pop : delete a last item
+	- shift : delete a first item
+	- index(<item_value>) -> int index of item_value : like indefOf
+	- first: get first item
+	- last: get last item
+	- .unshift(<item_value>): insert a value to first index
+	- delete_at(<index>) | slice!(<index>)
+	- delete (<index>): delete by item value
+	- .flatten: chuyển đổi mảng con thành phần tử trong mảng chứa nó
+	- clear : xoá toàn bộ phần tử trong mảng
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
