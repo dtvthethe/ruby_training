@@ -17,5 +17,8 @@ a = "the quick brown fox jumps over the lazy dog"
 p a.split(/ /)
 =end
 
-a = "ABC"
-p a.capitalize
+puts "nhap vao ten"
+ten = gets.chomp
+puts "nhap vao tuoi"
+tuoi = gets.chomp
+puts "Ho ten: #{ten}, tuoi: #{tuoi}"

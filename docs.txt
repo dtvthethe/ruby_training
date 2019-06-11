@@ -1,4 +1,17 @@
 IRB 
+.class : see the type off varriable
+
+1/ Convert data type:
+		+ .to_i: convert to number type
+		+ .to_f: convert to float value
+2/ Compare:
+	<=>: so sanh doi xung:
+		+ neu < -1
+		+ neu > 1
+		+ neu 2 ben = nhau return 0
+	<a_value>.eql?(<b_value>): so sanh ca kieu du lieu, tuong tu === trong js
+	<def_name>! : gán luôn giá trị vào biến
+============================
 
 I/ VARRIABLES
 	1/ Global var: $sign
@@ -6,3 +19,29 @@ I/ VARRIABLES
 	3/ Instance var: @sign
 	4/ Class var: @@sign
 	5/ Constants: Capital Letter
+
+
+II/ IN OR OUT 
+	- puts : print values #{varriable_name}
+	- gets => gets.chomp : get value input on command line: 
+III/ STRING
+	- .upcase
+	- .downcase
+	- .swapcase: swap upcase to down case and oposite
+	- .reverse : reverse a string
+	- .empty? -> boolean: check empty string
+	- .capitalize: In hoa kí tự đầu tiên
+	- .include?("<string>") -> boolean: tim kiem 1 chuoi co trong 1 chuoi khac ko, phan biet chu hoa thuong
+	- .sub("<chuoi can thay>", "chuoi moi"): replace by <> <chuoi can thay>
+	- Text: 
+		<<<key_name>
+			<noi dung 1>
+			<noi dung 2>
+			<noi dung n>...
+		<key_name>
+
+	- 
+		+ a  = "a" 
+		+ b = "b"
+		+ a << b  : tương tự a += b
+		=> a = "ab"  
