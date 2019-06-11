@@ -1,0 +1,6 @@
+I/ VARRIABLES
+	1/ Global var: $sign
+	2/ Local var: sign
+	3/ Instance var: @sign
+	4/ Class var: @@sign
+	5/ Constants: Capital Letter
