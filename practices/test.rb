@@ -30,22 +30,19 @@ a = [3,5,2,56,2,54,2,2]
 
 # a.each { |x| proc.call(x) }
 
-yeild 
-
 
 # lam = ->(par) { puts par * 2 }
 
 # [3,5,2,56,2,54,2,2].each { |x| lam.call(x) }
 
 
-
-[3,5,2,56,2,54,2,2].each do |x|  
-	if x > 10 then
-		puts ' > 10'   
-	else
-		puts x
-	end
-end
+# [3,5,2,56,2,54,2,2].each do |x|  
+# 	if x > 10 then
+# 		puts ' > 10'   
+# 	else
+# 		puts x
+# 	end
+# end
 
 
 def abc
@@ -77,4 +74,37 @@ ss = [3,5,2,56,2,54,2,2].map { |x| lamb.call(x) }
 
 
 my_array = [1,2,3,4,5,100]
-puts my_array.inject(9000) { |result, item| result + item }
+
+# puts my_array.inject(9000) { |result, item| result + item }
+
+a = 2
+b = 0
+c = 0
+
+# begin
+# 	c = a/b
+# rescue StandardError => e 
+# 	puts e
+# else 
+# 	puts c
+# ensure
+# 	puts 'TODO'
+# end
+
+
+
+retries = 2
+
+begin
+	c = a / b
+rescue StandardError => e #error
+	if retries > 0
+		puts "retry time = #{retries}"
+		sleep 1
+		retries -= 1
+		retry
+	end
+else # success 
+	puts "successfully value = #{c}"
+end
+
