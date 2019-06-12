@@ -1,6 +1,8 @@
 IRB 
 .class : see the type off varriable
 
+Book online: https://launchschool.com/books/ruby/read/introduction
+
 1/ Convert data type:
 		+ .to_i: convert to number type
 		+ .to_f: convert to float value
@@ -16,8 +18,8 @@ IRB
 I/ VARRIABLES
 	1/ Global var: $sign
 	2/ Local var: sign
-	3/ Instance var: @sign
-	4/ Class var: @@sign
+	3/ ** Instance var: @sign
+	4/ ** Class var: @@sign
 	5/ Constants: Capital Letter
 
 
@@ -60,22 +62,128 @@ IV/ Array
 	- .flatten: chuyển đổi mảng con thành phần tử trong mảng chứa nó
 	- clear : xoá toàn bộ phần tử trong mảng
 
+V/ BLock, Proc, Lambda
+	1/ BLock: 1 khối lênh đc dặt trong {...}: dành cho 1 dòng,  hoặc do...end: dành cho nhiều dòng
+
+	2/ Proc: .call(), Doesn't care parameter, can't return value
+
+	3/ Lambda: . call(), pass parameters EX: times_two.call(10), return value
 
 
+VI/ LOOP
+	1/ While:
+		while conditional [do]
+			# TODO
+		end
+
+		OR
+
+		begin
+			# TODO
+		end while conditional
+
+	2/ Until:
+
+		until conditional [do]
+			# TODO
+		end
+
+		OR
+
+		begin
+			$ TODO
+		end until conditional
+
+	3/ Each:
+		collection.each{|item| #something}
+
+		# OR
+		collection.each do |item|
+			# something
+		end
+
+	4/ For:
+		for variable [, variable ...] in expression [do]
+			# code
+		end
+	** Break and Next
+	** Redo and Retry
+	** Select -> new array object by condition, 
+	** Map -> new array object, 
+	** Inject: tính phép tính trên 1 mảng
+		my_array = [1,2,3,4,5,100]
+		puts my_array.inject(9000) { |result, item| result + item } #=> 9115
+
+VII/ CONDITION:
+	1/ If:
+		code if condition: if one line
+	2/ Unless:
+		unless conditional [then]
+			code
+		[else
+			code ]
+		end 
+
+		#OR
+
+		code unless conditional
+	3/ Case When:
+		case expression
+		[when expression [, expression ...] [then]
+			code ]...
+		[else
+			code ]
+		end
+
+		# Example:
+			$age = 5
+			case $age
+			when 0 .. 2
+				puts "baby"
+			when 3 .. 6
+				puts "little child"
+			when 7 .. 12
+				puts "child"
+			when 13 .. 18
+				puts "youth"
+			else
+				puts "adult"
+			end
+
+VIII/ HASH
+	key | value pair
+
+	1/ Create Hash:
+		- Using Hash object:
+			hsh = Hash.new  #OR hsh = Hash.new("default value")
+
+		- Using literal:
+			hsh = Hash["a":"Apple", "b":"SamSung"] : 
+			hsh = Hash["a"=>"Airbnb", "b"=>"Booking", "c"=>"Agoda"]
+
+		- Convert:
+			Hash.try_convert({1=>2})   # => {1=>2}
+			Hash.try_convert("1=>2")   # => nil ====> error
 
 
+	2/ Access an item inside hash
+		h[:a] #=> 100
+		h[:c] #=> nil
+		h.keys #=> [:a, :b]
+		h.values #=> [100, 200]
 
 
+===========OOP=============
+:D
+@@class var/meth : similiar static 
 
 
+VIX/ FILE
+
+	● r: read-only (starts at beginning of file)
+	● w: write-only (if the file exists, overwrites everything in the file)
+	● w+: read and write (if the file exists, overwrites everything in the file)
+	● a+: read-write (if file exists, starts at end of file. Otherwise creates a new file). Suitable for updating files.
 
 
-
-
-
-
-
-
-
-
-
+VV/ 
