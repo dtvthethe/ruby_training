@@ -186,4 +186,23 @@ VIX/ FILE
 	● a+: read-write (if file exists, starts at end of file. Otherwise creates a new file). Suitable for updating files.
 
 
-VV/ 
+VV/ ERROR HANDING
+
+	begin
+		...
+	rescue StandardError => e  #catch error
+		...
+	else #success
+		...
+	ensure #finally
+		...
+	end
+
+	#Example:
+	begin
+		retries ||= 0
+		puts "try ##{ retries }"
+		raise "the roof"
+	rescue
+		retry if (retries += 1) < 3
+	end
