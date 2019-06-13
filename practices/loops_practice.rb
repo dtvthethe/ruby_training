@@ -15,10 +15,7 @@ result_detct = arr.detect{ |x| x > 2 }
 
 result_reject = arr.reject{ |x| x > 2 }
 
-p result_each
-p result_map
-p result_collect
-p result_select
-p result_inject
-p result_detct
-p result_reject
+
+
+load 'aa.rb'
+p ABC::primar
