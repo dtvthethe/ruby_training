@@ -3,6 +3,14 @@ IRB
 
 Book online: https://launchschool.com/books/ruby/read/introduction
 
+																									  
+                                |---------------------------------inherits------------------------------|
+								|											|---<<instrance>>----[Custom Class]
+[BasicObject] <--inherits-- [Object] <--inherits-- [Modue] <--inherits-- [Class]
+													  ^
+													  |---------------<<instance>>---------------[Custom Module]
+
+
 1/ Convert data type:
 		+ .to_i: convert to number type
 		+ .to_f: convert to float value
@@ -65,9 +73,9 @@ IV/ Array
 V/ BLock, Proc, Lambda
 	1/ BLock: 1 khối lênh đc dặt trong {...}: dành cho 1 dòng,  hoặc do...end: dành cho nhiều dòng
 
-	2/ Proc: .call(), Doesn't care parameter, can't return value
+	2/ Proc: .call(), Doesn't care parameter, can't return value, Object
 
-	3/ Lambda: . call(), pass parameters EX: times_two.call(10), return value
+	3/ Lambda: . call(), pass parameters EX: times_two.call(10), return value, Object
 
 
 VI/ LOOP
@@ -106,13 +114,26 @@ VI/ LOOP
 		for variable [, variable ...] in expression [do]
 			# code
 		end
-	** Break and Next
-	** Redo and Retry
-	** Select -> new array object by condition, 
-	** Map -> new array object, 
-	** Inject: tính phép tính trên 1 mảng
-		my_array = [1,2,3,4,5,100]
-		puts my_array.inject(9000) { |result, item| result + item } #=> 9115
+
+	5/ Iteration:
+
++---------+--------------------------+----------------------------+---------------------------------+-----------------------------------+-----------------------------+
+|         | Description              | Is return value/ new array | params                          | Code                              | Result                      |
++---------+--------------------------+----------------------------+---------------------------------+-----------------------------------+-----------------------------+
+| Each    |                          | Yes/ old values            | element of array                | arr.each { |x| x * 2 }            | [2, 8, 1, 2, 1, 9, 9, 4]    |
++---------+--------------------------+----------------------------+---------------------------------+-----------------------------------+-----------------------------+
+| Collect |                          | Yes                        | element of array                | arr.collect { |x| x * 2 }         | [4, 16, 2, 4, 2, 18, 18, 8] |
++---------+--------------------------+----------------------------+---------------------------------+-----------------------------------+-----------------------------+
+| Map     |                          | Yes                        | element of array                | arr.map { |x| x * 2 }             | [4, 16, 2, 4, 2, 18, 18, 8] |
++---------+--------------------------+----------------------------+---------------------------------+-----------------------------------+-----------------------------+
+| Select  |                          | yes                        | element of array, condition     | arr.select { |x| x > 2 }          | [8, 9, 9, 4]                |
++---------+--------------------------+----------------------------+---------------------------------+-----------------------------------+-----------------------------+
+| Inject  | perform calculate        | yes                        | 2 params(result, item of array) | arr.inject(9000) { |r, x| r + x } | 9036                        |
++---------+--------------------------+----------------------------+---------------------------------+-----------------------------------+-----------------------------+
+| Detect  | get first value by condi | yes                        | element of array, condition     | arr.detect{ |x| x > 2 }           | 8                           |
++---------+--------------------------+----------------------------+---------------------------------+-----------------------------------+-----------------------------+
+| Reject  | oposite with SELECT      | yes                        | element of array, condition     | arr.reject{ |x| x > 2 }           | [2, 1, 2, 1]                |
++---------+--------------------------+----------------------------+---------------------------------+-----------------------------------+-----------------------------+
 
 VII/ CONDITION:
 	1/ If:
@@ -149,6 +170,15 @@ VII/ CONDITION:
 			else
 				puts "adult"
 			end
+
+	4/ Break and Next
+		Next similiar "Continue" other language progra
+
+	5/ Redo and Retry
+		*/ Redo:
+
+		*/ Retry:
+			
 
 VIII/ HASH
 	key | value pair
@@ -206,3 +236,7 @@ VV/ ERROR HANDING
 	rescue
 		retry if (retries += 1) < 3
 	end
+VVI/ INCLUDE & EXTEND
+	1/ Include
+
+	2/ Extend
