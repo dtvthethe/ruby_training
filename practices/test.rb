@@ -93,20 +93,22 @@ c = 0
 
 
 
-# retries = 2
-
-# begin
-# 	c = a / b
-# rescue StandardError => e #error
-# 	if retries > 0
-# 		puts "retry time = #{retries}"
-# 		sleep 1
-# 		retries -= 1
-# 		retry
-# 	end
-# else # success 
-# 	puts "successfully value = #{c}"
-# end
+retries = 2
+puts "begin .... rescue!!"
+begin
+	c = a / b
+rescue StandardError => e #error
+	if retries > 0
+		puts "retry time = #{retries}"
+		sleep 1
+		retries -= 1
+		retry
+	end
+else # success 
+	puts "successfully value = #{c}"
+ensure
+	puts "ensure!!"
+end
 
 
 

@@ -21,6 +21,11 @@ Book online: https://launchschool.com/books/ruby/read/introduction
 		+ neu 2 ben = nhau return 0
 	<a_value>.eql?(<b_value>): so sanh ca kieu du lieu, tuong tu === trong js
 	<def_name>! : gán luôn giá trị vào biến
+
+
+3/ AND , NOT, OR, XOR
+	AND: lấy 2 phần tử giống nhau giữa 2 mảng
+	OR: kết qủa giống set trong python 
 ============================
 
 I/ VARRIABLES
@@ -75,7 +80,7 @@ V/ BLock, Proc, Lambda
 
 	2/ Proc: .call(), Doesn't care parameter, can't return value, Object
 
-	3/ Lambda: . call(), pass parameters EX: times_two.call(10), return value, Object
+	3/ Lambda: .call(), pass parameters EX: times_two.call(10), return value, Object
 
 
 VI/ LOOP
@@ -175,9 +180,14 @@ VII/ CONDITION:
 		Next similiar "Continue" other language progra
 
 	5/ Redo and Retry
-		*/ Redo:
+		*/ Redo: chỉ thực hiện lại 1 câu lệnh đứng trước redo
 
-		*/ Retry:
+		*/ Retry: lặp lại tất cả lệnh trong block
+
+
+	===: kiểm tra theo case: Range, Class/Module, Regexp, Proc, Lambda 
+	eql?: CO GIA TRI GIONG NHAU
+	equal?: CUNG 1 DOI TUONG
 			
 
 VIII/ HASH
@@ -240,3 +250,34 @@ VVI/ INCLUDE & EXTEND
 	1/ Include
 
 	2/ Extend
+
+=============================================
+
+	??: ===, eql?, equal?
+		== vs eql?:  như nhau
+		===: kiểm tra theo case: Range -> Class/Module -> Regexp -> Proc -> Lambda 
+		(1..3) === 2 #=> true
+		(1..3) === 6 #=> false 
+		Array === [1, 2] #=> true : tùy vào mỗi class nó sẽ có mỗi cách implement riêng
+		Hash === [1, 2] #=> false
+		/ub/ === "Ruby" #=> true 
+		/rails/ === "Ruby" #=> false
+			
+		equal?: PHAI TRONG CUNG 1 DOI TUONG
+
+	??: include, extend
+		- include hay extend chỉ lấy instance method để thành instance method hay class method trong class.
+		- Trường hợp sử dụng extend nếu lấy 1 object extend thì nó sẽ thành singleton method của object đó
+
+		[
+		class method là sigleton method
+		singleton method có thể đc tạo bằng cách add thêm method sau khi khỏi tạo 1 object
+		]
+
+	??: Redo, retry
+		redo: chay lai nội dung trong khối block 
+		retry: chay lai nguyen 1 block
+			Nếu là vòng lặp thì  redo nó sẽ loop lại vòng lặp hiện tại
+			Ví dụ lặp mảng từ i từ 1 đến 5
+			i = 5 thì nó sẽ chạy lại vòng lặp với i =5
+			Còn redo nó sẽ chạy lại vòng lặp từ đầu nghĩa là từ i = 1
